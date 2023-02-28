@@ -1,0 +1,13 @@
+C:\Users\rahul\Downloads\codepath-kali-vm_key.pem
+
+51.103.219.157
+
+ssh -i C:\Users\rahul\Downloads\codepath-kali-vm_key.pem kali@51.103.219.157
+
+ssh -i codepath-kali-vm_key.pem kali@51.103.219.157
+
+# Source: https://stackoverflow.com/a/43317244
+$path = ".\aws-ec2-key.pem"
+icacls.exe codepath-kali-vm_key.pem /reset
+icacls.exe codepath-kali-vm_key.pem /GRANT:R "$($env:USERNAME):(R)"
+icacls.exe codepath-kali-vm_key.pem /inheritance:r
